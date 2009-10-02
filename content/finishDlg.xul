@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://helloworld/skin/window.css" type="text/css"?>
+
+<window id="findfile-window" title="this is test" orient="horizontal" align="start" pack="center"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="prototype.js"/>    
+  <script src="finishDlg.js"/>    
+  <tooltip id="linktip">
+    <label value="链接"/>
+  </tooltip>
+  <tooltip id="titletip">
+    <label value="名称"/>
+  </tooltip>
+  <tooltip id="desctip">
+    <label value="描述"/>
+  </tooltip>
+  <tooltip id="tagstip">
+    <label value="标签"/>
+  </tooltip>
+  <vbox class="disp-contents" align="center"> 
+    <spacer height="25px"/>
+    <hbox class="contents">
+      <hbox class="labels">
+	<vbox>
+	  <spacer flex="1"/>
+	  <image src="chrome://helloworld/content/images/link.png" tooltip="linktip"/>
+	  <spacer flex="1"/>
+	</vbox>
+      </hbox>
+      <textbox class="input-areas" id="input-link"/>
+    </hbox>
+    <spacer class="linespace"/>		
+    <hbox class="contents">
+      <hbox class="labels">
+	<vbox>
+	  <spacer flex="1"/>
+	  <image src="chrome://helloworld/content/images/book.png" tooltip="titletip"/>
+	  <spacer flex="1"/>
+	</vbox>
+      </hbox>
+      <textbox class="input-areas" id="input-title"/>
+    </hbox>
+    <spacer class="linespace"/>		
+    <hbox class="contents">
+      <hbox class="labels">
+	<vbox>
+	  <spacer flex="1"/>
+	  <image src="chrome://helloworld/content/images/pencil.png" tooltip="desctip"/>
+	  <spacer flex="1"/>
+	</vbox>
+      </hbox>
+      <textbox class="input-areas" id="input-comment" value="" multiline="true" style="height:8em;"/>
+    </hbox>
+    <spacer class="linespace"/>		
+    <hbox class="contents">
+      <hbox class="labels">
+	<vbox>
+	  <spacer flex="1"/>
+	  <image src="chrome://helloworld/content/images/label.png" tooltip="tagstip"/>
+	  <spacer flex="1"/>
+	</vbox>
+      </hbox>
+      <textbox class="input-areas" id="input-tags" value=""/>
+    </hbox>
+    <spacer class="linespace"/>		
+    <vbox style="width:400px;">
+      <spacer class="linespace"/>		
+      <hbox pack="end">
+	<button label="ok" oncommand="testwindow.onok(event)"/>
+	<button label="cancel" oncommand="testwindow.oncancel(event)"/>
+      </hbox>
+    </vbox>
+  </vbox>
+</window>
+

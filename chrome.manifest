@@ -1,0 +1,4 @@
+content	helloworld	content/
+locale	helloworld	en-US	locale/en-US/
+skin	helloworld	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://helloworld/content/clipfoxOverlay.xul
