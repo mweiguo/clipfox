@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="chrome://helloworld/skin/overlay.css" type="text/css"?>
-<!DOCTYPE overlay SYSTEM "chrome://helloworld/locale/helloworld.dtd">
+<?xml-stylesheet href="chrome://clipfox/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://clipfox/locale/helloworld.dtd">
 <overlay id="helloworld-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="overlay.js"/>
+  <script src="rssfwd.js"/>
   
   <stringbundleset id="stringbundleset">
-    <stringbundle id="helloworld-strings" src="chrome://helloworld/locale/helloworld.properties"/>
+    <stringbundle id="helloworld-strings" src="chrome://clipfox/locale/helloworld.properties"/>
   </stringbundleset>
 
   <menupopup id="menu_ToolsPopup">
@@ -14,14 +15,14 @@
   </menupopup>
   
   <statusbar id="status-bar">
-    <statusbarpanel id="my-panel" label="Hello, World status"/>
+    <statusbarpanel id="my-panel" label="rssfwd" oncommand="rssfwd.onOpenPreference" image="chrome://clipfox/content/images/accept.png"/>
   </statusbar>  
   
   <toolbarpalette id="BrowserToolbarPalette" align="center" pack="center">
     <spacer flex="1"/>
     <toolbarbutton
        id="Testing-Doit-Button"
-       image="chrome://helloworld/content/images/office4_24.png"
+       image="chrome://clipfox/content/images/office4_24.png"
        label="网摘"
        tooltiptext="Do it!"
        oncommand="helloworld.onMenuItemCommand(window.location);"

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://helloworld/skin/window.css" type="text/css"?>
+<?xml-stylesheet href="chrome://clipfox/skin/window.css" type="text/css"?>
 
 <window id="findfile-window" title="this is test" orient="horizontal" align="start" pack="center"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -24,7 +24,7 @@
       <hbox class="labels">
 	<vbox>
 	  <spacer flex="1"/>
-	  <image src="chrome://helloworld/content/images/link.png" tooltip="linktip"/>
+	  <image src="chrome://clipfox/content/images/link.png" tooltip="linktip"/>
 	  <spacer flex="1"/>
 	</vbox>
       </hbox>
@@ -35,7 +35,7 @@
       <hbox class="labels">
 	<vbox>
 	  <spacer flex="1"/>
-	  <image src="chrome://helloworld/content/images/book.png" tooltip="titletip"/>
+	  <image src="chrome://clipfox/content/images/book.png" tooltip="titletip"/>
 	  <spacer flex="1"/>
 	</vbox>
       </hbox>
@@ -46,7 +46,7 @@
       <hbox class="labels">
 	<vbox>
 	  <spacer flex="1"/>
-	  <image src="chrome://helloworld/content/images/pencil.png" tooltip="desctip"/>
+	  <image src="chrome://clipfox/content/images/pencil.png" tooltip="desctip"/>
 	  <spacer flex="1"/>
 	</vbox>
       </hbox>
@@ -57,7 +57,7 @@
       <hbox class="labels">
 	<vbox>
 	  <spacer flex="1"/>
-	  <image src="chrome://helloworld/content/images/label.png" tooltip="tagstip"/>
+	  <image src="chrome://clipfox/content/images/label.png" tooltip="tagstip"/>
 	  <spacer flex="1"/>
 	</vbox>
       </hbox>
