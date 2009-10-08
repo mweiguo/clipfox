@@ -2,8 +2,8 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
-    <em:id>helloworld@mweiguoatgmail.com</em:id>
-    <em:name>helloworld</em:name>
+    <em:id>clipfox@mweiguoatgmail.com</em:id>
+    <em:name>clipfox</em:name>
     <em:version>1.0</em:version>
     <em:creator>mweiguoatgmail.com</em:creator>
     <em:targetApplication>
