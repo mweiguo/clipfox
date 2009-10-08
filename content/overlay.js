@@ -116,7 +116,7 @@ var helloworld = {
 	helloworld.captureList = [];
 
 	// open dialog
-	window.openDialog("chrome://helloworld/content/finishDlg.xul", "save", "chrome,centerscreen,width=500,height=280,modal=yes", 
+	window.openDialog("chrome://clipfox/content/finishDlg.xul", "save", "chrome,centerscreen,width=500,height=280,modal=yes", 
 			  {status:"mystatus", mylo:content.document.location, myclips:tmp} );
 		
 	// restore ui

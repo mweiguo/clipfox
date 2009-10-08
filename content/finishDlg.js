@@ -14,10 +14,15 @@ var testwindow = {
 	var comment = document.getElementById ("input-comment").value;
 	
 	var ext = "{desc:[";
-	for ( var i=0; i<testwindow.clips.length; i++ )
-	    ext += "'" + testwindow.clips[i] + "',";
+	for ( var i=0; i<testwindow.clips.length; i++ ) {
+	    var tmp = testwindow.clips[i].replace (/"/g, "\\\"");
+	    tmp = tmp.replace (/'/g, "\\\'");
+	    ext += "'" + tmp + "',";
+	}
+	
 	ext += "], comment:'" + comment + "'}";
-	ext = ext.replace (/;/g, "$sc$");
+	
+//	ext = ext.replace (/;/g, "$sc$");
 	deliapi.addPost ( url, desc, ext, tags, testwindow.onPostFinished );
     }, 
     oncancel : function() {
@@ -31,19 +36,23 @@ var testwindow = {
 
 var deliapi = {
     addPost: function (url, desc, ext, tags, suCallback ) {
-	var cmd = "https://api.del.icio.us/v1/posts/add?";
-	cmd += "url=" + encodeURIComponent (url);
+//	var cmd = "https://api.del.icio.us/v1/posts/add?";
+	var cmd = "url=" + encodeURIComponent (url);
 	if ( desc != "" )
-	    cmd += "&description=" + encodeURI ( desc );
+	    cmd += "&description=" + desc;
 	if ( ext != "" )
-	    cmd += "&extended=" + encodeURI (ext);
+	    cmd += "&extended=" + encodeURIComponent(ext);
 	if ( tags != "" )
-	    cmd += "&tags=" + encodeURI ( tags );
-	new Ajax.Request( cmd,
-			 { method:'get', 
-			   onSuccess: suCallback,
-			   onFailure: function(){ alert('Something went wrong...') }
-			 }
+	    cmd += "&tags=" + tags;
+
+//	alert ( cmd );
+	new Ajax.Request( "https://api.del.icio.us/v1/posts/add",
+			  { 
+			      postBody:cmd,
+			      method:'post', 
+			      onSuccess: suCallback,
+			      onFailure: function(){ alert('Something went wrong...') }
+			  }
 			);
     }
 };
