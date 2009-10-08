@@ -2,7 +2,7 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://clipfox/skin/window.css" type="text/css"?>
 
-<window id="findfile-window" title="this is test" orient="horizontal" align="start" pack="center"
+<window id="findfile-window" title="保存" orient="horizontal" align="start" pack="center"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="prototype.js"/>    
   <script src="finishDlg.js"/>    
