@@ -102,7 +102,7 @@ var helloworld = {
 	content.document.body.appendChild ( div );
 	helloworld.captureBoxes.push ( div );
 
-	alert ( e.target.nodeName + " is selected and total selected count is " + helloworld.captureList.length );	
+//	alert ( e.target.nodeName + " is selected and total selected count is " + helloworld.captureList.length );	
     },
 
     onFinisheEditing: function () {
@@ -116,7 +116,7 @@ var helloworld = {
 	helloworld.captureList = [];
 
 	// open dialog
-	window.openDialog("chrome://clipfox/content/finishDlg.xul", "save", "chrome,centerscreen,width=500,height=280,modal=yes", 
+	window.openDialog("chrome://clipfox/content/finishDlg.xul", "save", "chrome,centerscreen,width=500,height=280", 
 			  {status:"mystatus", mylo:content.document.location, myclips:tmp} );
 		
 	// restore ui
